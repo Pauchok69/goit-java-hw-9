@@ -21,9 +21,7 @@ public class PhoneNumbersPrinter {
     private ArrayList<String> getValidPhoneNumbersFrom(File file) {
         ArrayList<String> validPhoneNumbersList = new ArrayList<>();
 
-        try (FileReader reader = new FileReader(file)) {
-            Scanner scanner = new Scanner(reader);
-
+        try (Scanner scanner = new Scanner(new FileReader(file))) {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
 
